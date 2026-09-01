@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:;base64,=">
+    <title>Бургерная</title>
+</head>
+<body>
+    <header class="header" id="home">
+        <div class="header__top">
+            <div class="header__logo-container">
+                <a href="#home" class="header__logo">
+                    <img src="./images/vf-logo.svg" alt="Логотип" class="header__logo-img" width="50" height="50">
+                    <span class="header__logo-text">Vintage Food</span>
+                </a>
+            </div>
+
+            <!-- Кнопка бургер-меню -->
+            <button class="header__burger-btn" aria-label="Открыть меню">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+
+            <!-- Затемнение фона -->
+            <div class="header__mobile-overlay"></div>
+
+            <!-- Мобильное меню -->
+            <nav class="header__mobile-nav">
+                <ul class="header__mobile-list">
+                    <li class="header__mobile-item"><a href="#menu" class="header__mobile-link" data-section="menu">Меню</a></li>
+                    <li class="header__mobile-item"><a href="#promo" class="header__mobile-link" data-section="promo">Акции</a></li>
+                    <li class="header__mobile-item"><a href="#about" class="header__mobile-link" data-section="about">О нас</a></li>
+                    <li class="header__mobile-item"><a href="#order" class="header__mobile-link" data-section="order">Заказать</a></li>
+                </ul>
+            </nav>
+
+            <!-- Десктопное меню -->
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#menu" class="header__link" data-section="menu">Меню</a></li>
+                    <li class="header__item"><a href="#promo" class="header__link" data-section="promo">Акции</a></li>
+                    <li class="header__item"><a href="#about" class="header__link" data-section="about">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__hero-wrapper">
+            <div class="header__hero-container">
+                <h1 class="header__hero-title">Быстрая доставка для Вас</h1>
+                <p class="header__hero-subtitle">Сделай первый заказ и получи скидку 50%</p>
+                <button class="header__hero-btn" id="heroOrderBtn">Заказать</button>
+            </div>
+
+            <div class="header__hero-img">
+                <img src="./images/burger.png" alt="Бургер" width="600" height="600">
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Секция О нас -->
+        <section class="about-section" id="about">
+            <div class="about-section__container">
+                <h2 class="about-section__title">О нас</h2>
+                <p class="about-section__subtitle">Мы готовим с любовью с 2015 года</p>
+
+                <div class="about-section__content">
+                    <div class="about-section__text-block">
+                        <p class="about-section__text">
+                            <strong>Vintage Food</strong> — это место, где классические рецепты встречаются с современными технологиями. 
+                            Мы используем только свежие, натуральные ингредиенты и готовим каждый заказ с особым вниманием к деталям.
+                        </p>
+                        <p class="about-section__text">
+                            Наша миссия — сделать качественную еду доступной каждому. Мы доставляем заказы в течение 30 минут, 
+                            чтобы вы могли наслаждаться вкусом, не выходя из дома.
+                        </p>
+                        <p class="about-section__text">
+                            Более 50 000 довольных клиентов уже оценили наш сервис. Присоединяйтесь!
+                        </p>
+                    </div>
+
+                    <div class="about-section__stats">
+                        <div class="about-section__stat-item">
+                            <span class="about-section__stat-number">8+</span>
+                            <span class="about-section__stat-label">лет на рынке</span>
+                        </div>
+                        <div class="about-section__stat-item">
+                            <span class="about-section__stat-number">50K+</span>
+                            <span class="about-section__stat-label">довольных клиентов</span>
+                        </div>
+                        <div class="about-section__stat-item">
+                            <span class="about-section__stat-number">30</span>
+                            <span class="about-section__stat-label">минут доставка</span>
+                        </div>
+                        <div class="about-section__stat-item">
+                            <span class="about-section__stat-number">100%</span>
+                            <span class="about-section__stat-label">натуральные продукты</span>
+                        </div>
+                    </div>
+
+                    <div class="about-section__features">
+                        <div class="about-section__feature">
+                            <div class="about-section__feature-icon">🍔</div>
+                            <h3 class="about-section__feature-title">Свежие ингредиенты</h3>
+                            <p class="about-section__feature-text">Закупаем продукты каждый день у проверенных поставщиков</p>
+                        </div>
+                        <div class="about-section__feature">
+                            <div class="about-section__feature-icon"></div>
+                            <h3 class="about-section__feature-title">Быстрая доставка</h3>
+                            <p class="about-section__feature-text">Доставляем заказ в течение 30 минут или вернём деньги</p>
+                        </div>
+                        <div class="about-section__feature">
+                            <div class="about-section__feature-icon">👨‍</div>
+                            <h3 class="about-section__feature-title">Опытные повара</h3>
+                            <p class="about-section__feature-text">Наши шеф-повара имеют опыт работы более 10 лет</p>
+                        </div>
+                        <div class="about-section__feature">
+                            <div class="about-section__feature-icon">💰</div>
+                            <h3 class="about-section__feature-title">Доступные цены</h3>
+                            <p class="about-section__feature-text">Качественная еда по ценам, которые не ударят по карману</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Меню -->
+        <section class="menu-section" id="menu">
+            <h2 class="menu-section__title">Меню</h2>
+
+            <div class="menu-section__cards-container">
+                <div class="menu-section__card" data-card="burgers">
+                    <img src="./images/burgers.jpg" alt="Бургеры" class="menu-section__card-img" width="400" height="280">
+                    <p class="menu-section__card-text">Бургеры</p>
+                </div>
+                <div class="menu-section__card" data-card="chicken">
+                    <img src="./images/crispy.jpg" alt="Блюда из курицы" class="menu-section__card-img" width="400" height="280">
+                    <p class="menu-section__card-text">Блюда из курицы</p>
+                </div>
+                <div class="menu-section__card" data-card="hot">
+                    <img src="./images/grilled.jpg" alt="Горячие блюда" class="menu-section__card-img" width="400" height="280">
+                    <p class="menu-section__card-text">Горячие блюда</p>
+                </div>
+                <div class="menu-section__card" data-card="snacks">
+                    <img src="./images/nuggets.jpg" alt="Наггетсы" class="menu-section__card-img" width="400" height="280">
+                    <p class="menu-section__card-text">Закуски</p>
+                </div>
+                <div class="menu-section__card" data-card="salads">
+                    <img src="./images/salad.jpg" alt="Салаты" class="menu-section__card-img" width="400" height="280">
+                    <p class="menu-section__card-text">Салаты</p>
+                </div>
+                <div class="menu-section__card" data-card="desserts">
+                    <img src="./images/homemade.jpg" alt="Десерты" class="menu-section__card-img" width="400" height="280">
+                    <p class="menu-section__card-text">Десерты</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Акции -->
+        <section class="promo-section" id="promo">
+            <h2 class="promo-section__title">Акции</h2>
+            <p class="promo-section__subtitle">Выгодные предложения только для вас</p>
+
+            <div class="promo-section__cards-container">
+                <div class="promo-section__card promo-section__card--big">
+                    <div class="promo-section__card-badge">-50%</div>
+                    <div class="promo-section__card-img-wrapper">
+                        <img src="./images/burgers.jpg" alt="Скидка на бургеры" class="promo-section__card-img" width="600" height="320">
+                    </div>
+                    <div class="promo-section__card-body">
+                        <h3 class="promo-section__card-title">Первый заказ</h3>
+                        <p class="promo-section__card-text">Скидка 50% на первый заказ. Попробуйте наши лучшие бургеры по выгодной цене!</p>
+                        <span class="promo-section__card-code">Промокод: FIRST50</span>
+                    </div>
+                </div>
+
+                <div class="promo-section__card">
+                    <div class="promo-section__card-badge">-30%</div>
+                    <div class="promo-section__card-img-wrapper">
+                        <img src="./images/crispy.jpg" alt="Комбо" class="promo-section__card-img" width="400" height="220">
+                    </div>
+                    <div class="promo-section__card-body">
+                        <h3 class="promo-section__card-title">Комбо дня</h3>
+                        <p class="promo-section__card-text">Бургер + картофель + напиток со скидкой 30% каждый день до 15:00</p>
+                        <span class="promo-section__card-code">Промокод: COMBO30</span>
+                    </div>
+                </div>
+
+                <div class="promo-section__card">
+                    <div class="promo-section__card-badge">-20%</div>
+                    <div class="promo-section__card-img-wrapper">
+                        <img src="./images/nuggets.jpg" alt="Семейный" class="promo-section__card-img" width="400" height="220">
+                    </div>
+                    <div class="promo-section__card-body">
+                        <h3 class="promo-section__card-title">Семейный ужин</h3>
+                        <p class="promo-section__card-text">Закажите от 1500 ₽ и получите скидку 20% на весь заказ</p>
+                        <span class="promo-section__card-code">Промокод: FAMILY20</span>
+                    </div>
+                </div>
+
+                <div class="promo-section__card">
+                    <div class="promo-section__card-badge"></div>
+                    <div class="promo-section__card-img-wrapper">
+                        <img src="./images/homemade.jpg" alt="Десерт в подарок" class="promo-section__card-img" width="400" height="220">
+                    </div>
+                    <div class="promo-section__card-body">
+                        <h3 class="promo-section__card-title">Десерт в подарок</h3>
+                        <p class="promo-section__card-text">При заказе от 2000 ₽ — фирменный десерт бесплатно!</p>
+                        <span class="promo-section__card-code">Промокод: SWEET</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция Оформить заказ -->
+        <section class="order-section" id="order">
+            <div class="order-section__container">
+                <h2 class="order-section__title">Оформить заказ</h2>
+                <p class="order-section__subtitle">Заполните форму и мы доставим ваш заказ в течение 30 минут</p>
+                
+                <form class="order-section__form" id="orderForm">
+                    <div class="order-section__field">
+                        <label class="order-section__label" for="orderName">Ваше имя</label>
+                        <input type="text" id="orderName" class="order-section__input" placeholder="Иван Иванов" required>
+                    </div>
+                    
+                    <div class="order-section__field">
+                        <label class="order-section__label" for="orderPhone">Телефон</label>
+                        <input type="tel" id="orderPhone" class="order-section__input" placeholder="+7 (999) 123-45-67" required>
+                    </div>
+                    
+                    <div class="order-section__field">
+                        <label class="order-section__label" for="orderAddress">Адрес доставки</label>
+                        <input type="text" id="orderAddress" class="order-section__input" placeholder="ул. Примерная, д. 1, кв. 1" required>
+                    </div>
+                    
+                    <div class="order-section__field">
+                        <label class="order-section__label" for="orderComment">Комментарий к заказу</label>
+                        <textarea id="orderComment" class="order-section__textarea" placeholder="Пожелания к заказу..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="order-section__btn">Отправить заказ</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <ul class="footer__links-list">
+                <li class="footer__links-item"><a href="#promo" class="footer__link">Программа лояльности</a></li>
+                <li class="footer__links-item"><a href="#" class="footer__link">Политика конфиденциальности</a></li>                
+                <li class="footer__links-item"><a href="#" class="footer__link">Договор офёрты</a></li>
+            </ul>
+
+            <ul class="footer__info-list">
+                <li class="footer__info-item"><p class="footer__text">ООО «Vintage Food»</p></li>
+                <li class="footer__info-item"><p class="footer__text">Все права защищены</p></li>                
+            </ul>
+
+            <ul class="footer__social-list">
+                <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                        <img src="./images/vk-50.png" class="footer__social-icon" alt="ВКонтакте" width="50" height="50">
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="#" class="footer__social-link">
+                        <img src="./images/telegram-logo-50.png" class="footer__social-icon" alt="Telegram" width="50" height="50">
+                    </a>
+                </li>                
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для карточек -->
+    <div class="modal" id="cardModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть">&times;</button>
+            <div class="modal__img-wrapper">
+                <img class="modal__img" src="" alt="">
+            </div>
+            <div class="modal__body">
+                <h3 class="modal__title"></h3>
+                <p class="modal__description"></p>
+                <div class="modal__footer">
+                    <span class="modal__price"></span>
+                    <button class="modal__btn">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно благодарности -->
+    <div class="modal" id="thankYouModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content modal__content--thankyou">
+            <button class="modal__close" aria-label="Закрыть">&times;</button>
+            <div class="modal__thankyou-icon">✓</div>
+            <h3 class="modal__thankyou-title">Спасибо за заказ!</h3>
+            <p class="modal__thankyou-text">Мы доставим ваш заказ в ближайшее время</p>
+            <button class="modal__thankyou-btn">Отлично!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
