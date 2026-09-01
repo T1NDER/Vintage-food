@@ -37,8 +37,6 @@ body {
     background-attachment: scroll;
 }
 
-/* ===== ОБЩИЕ СТИЛИ СЕКЦИЙ ===== */
-
 .main {
     position: relative;
 }
@@ -52,7 +50,6 @@ body {
     width: 100%;
 }
 
-/* ===== ШАПКА ===== */
 
 .header {
     width: 100%;
@@ -131,11 +128,12 @@ body {
     border-radius: 8px;
 }
 
-.header__link:hover,
-.header__link:active {
-    transform: scale(1.15);
-    color: #c0392b;
-    text-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
+@media (hover: hover) {
+    .header__link:hover {
+        transform: scale(1.15);
+        color: #c0392b;
+        text-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
+    }
 }
 
 .header__link:active {
@@ -145,8 +143,6 @@ body {
 .header__link--active {
     font-weight: 800;
 }
-
-/* ===== БУРГЕР-КНОПКА ===== */
 
 .header__burger-btn {
     display: none;
@@ -192,10 +188,7 @@ body {
     background: #c0392b;
 }
 
-/* ===== МОБИЛЬНОЕ МЕНЮ ===== */
-
 .header__mobile-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -204,16 +197,16 @@ body {
     background: rgba(0, 0, 0, 0.4);
     z-index: 999;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
 .header__mobile-overlay--active {
-    display: block;
     opacity: 1;
+    pointer-events: auto;
 }
 
 .header__mobile-nav {
-    display: none;
     position: fixed;
     top: 0;
     right: -100%;
@@ -229,10 +222,14 @@ body {
     overflow-y: auto;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
     border-radius: 20px 0 0 20px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .header__mobile-nav--active {
     right: 0;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .header__mobile-list {
@@ -298,11 +295,12 @@ body {
     text-align: left;
 }
 
-.header__mobile-link:hover,
-.header__mobile-link:active {
-    transform: scale(1.05);
-    color: #c0392b;
-    background: rgba(255, 255, 255, 0.3);
+@media (hover: hover) {
+    .header__mobile-link:hover {
+        transform: scale(1.05);
+        color: #c0392b;
+        background: rgba(255, 255, 255, 0.3);
+    }
 }
 
 .header__mobile-link:active {
@@ -312,8 +310,6 @@ body {
 .header__mobile-link--active {
     font-weight: 800;
 }
-
-/* ===== HERO ===== */
 
 .header__hero-wrapper {
     width: 100%;
@@ -357,11 +353,12 @@ body {
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.header__hero-btn:hover,
-.header__hero-btn:active {
-    transform: scale(1.05);
-    background: #cc0000;
-    box-shadow: 0 8px 20px rgba(204, 0, 0, 0.4);
+@media (hover: hover) {
+    .header__hero-btn:hover {
+        transform: scale(1.05);
+        background: #cc0000;
+        box-shadow: 0 8px 20px rgba(204, 0, 0, 0.4);
+    }
 }
 
 .header__hero-btn:active {
@@ -382,8 +379,6 @@ body {
     height: auto;
     object-fit: contain;
 }
-
-/* ===== СЕКЦИЯ О НАС ===== */
 
 .about-section {
     max-width: 1400px;
@@ -459,7 +454,13 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-section__stat-item:hover,
+@media (hover: hover) {
+    .about-section__stat-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+}
+
 .about-section__stat-item:active {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -495,15 +496,16 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-section__feature:hover,
+@media (hover: hover) {
+    .about-section__feature:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+}
+
 .about-section__feature:active {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.about-section__feature-icon {
-    font-size: 40px;
-    line-height: 1;
 }
 
 .about-section__feature-title {
@@ -520,8 +522,6 @@ body {
     color: #333;
     line-height: 1.5;
 }
-
-/* ===== КАРТОЧКИ МЕНЮ ===== */
 
 .menu-section {
     max-width: 1600px;
@@ -558,13 +558,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    position: relative;
+    z-index: 1;
 }
 
-.menu-section__card:hover,
-.menu-section__card:active {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.6);
+@media (hover: hover) {
+    .menu-section__card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .menu-section__card:active {
@@ -580,9 +585,10 @@ body {
     transition: transform 0.35s ease;
 }
 
-.menu-section__card:hover .menu-section__card-img,
-.menu-section__card:active .menu-section__card-img {
-    transform: scale(1.05);
+@media (hover: hover) {
+    .menu-section__card:hover .menu-section__card-img {
+        transform: scale(1.05);
+    }
 }
 
 .menu-section__card-text {
@@ -593,8 +599,6 @@ body {
     margin: 0;
     color: #000;
 }
-
-/* ===== СЕКЦИЯ АКЦИИ ===== */
 
 .promo-section {
     max-width: 1600px;
@@ -640,13 +644,16 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
-.promo-section__card:hover,
-.promo-section__card:active {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-    background: rgba(255, 255, 255, 0.6);
+@media (hover: hover) {
+    .promo-section__card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .promo-section__card:active {
@@ -689,9 +696,10 @@ body {
     transition: transform 0.35s ease;
 }
 
-.promo-section__card:hover .promo-section__card-img,
-.promo-section__card:active .promo-section__card-img {
-    transform: scale(1.05);
+@media (hover: hover) {
+    .promo-section__card:hover .promo-section__card-img {
+        transform: scale(1.05);
+    }
 }
 
 .promo-section__card--big .promo-section__card-img {
@@ -733,8 +741,6 @@ body {
     letter-spacing: 1px;
     width: fit-content;
 }
-
-/* ===== СЕКЦИЯ ОФОРМЛЕНИЯ ЗАКАЗА ===== */
 
 .order-section {
     max-width: 1400px;
@@ -825,19 +831,18 @@ body {
     margin-top: 10px;
 }
 
-.order-section__btn:hover,
-.order-section__btn:active {
-    transform: scale(1.02);
-    background: #cc0000;
-    box-shadow: 0 10px 25px rgba(204, 0, 0, 0.4);
+@media (hover: hover) {
+    .order-section__btn:hover {
+        transform: scale(1.02);
+        background: #cc0000;
+        box-shadow: 0 10px 25px rgba(204, 0, 0, 0.4);
+    }
 }
 
 .order-section__btn:active {
     transform: scale(0.98);
     background: #990000;
 }
-
-/* ===== ФУТЕР ===== */
 
 .footer {
     width: 100%;
@@ -878,10 +883,11 @@ body {
     transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.footer__link:hover,
-.footer__link:active {
-    transform: scale(1.1);
-    color: #c0392b;
+@media (hover: hover) {
+    .footer__link:hover {
+        transform: scale(1.1);
+        color: #c0392b;
+    }
 }
 
 .footer__link:active {
@@ -929,16 +935,15 @@ body {
     transition: transform 0.25s ease;
 }
 
-.footer__social-link:hover .footer__social-icon,
-.footer__social-link:active .footer__social-icon {
-    transform: scale(1.2) rotate(-5deg);
+@media (hover: hover) {
+    .footer__social-link:hover .footer__social-icon {
+        transform: scale(1.2) rotate(-5deg);
+    }
 }
 
 .footer__social-link:active .footer__social-icon {
     transform: scale(0.9);
 }
-
-/* ===== МОДАЛЬНОЕ ОКНО КАРТОЧКИ ===== */
 
 .modal {
     position: fixed;
@@ -946,18 +951,20 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 10000;
     display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .modal--active {
     pointer-events: auto;
     opacity: 1;
+    visibility: visible;
 }
 
 .modal__overlay {
@@ -967,11 +974,12 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
+    z-index: 1;
 }
 
 .modal__content {
     position: relative;
+    z-index: 2;
     background: linear-gradient(180deg, #EDA418 0%, #f5c04a 100%);
     border-radius: 30px;
     max-width: 600px;
@@ -1007,10 +1015,11 @@ body {
     z-index: 10;
 }
 
-.modal__close:hover,
-.modal__close:active {
-    transform: scale(1.1) rotate(90deg);
-    background: rgba(0, 0, 0, 0.9);
+@media (hover: hover) {
+    .modal__close:hover {
+        transform: scale(1.1) rotate(90deg);
+        background: rgba(0, 0, 0, 0.9);
+    }
 }
 
 .modal__close:active {
@@ -1078,19 +1087,18 @@ body {
     transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
-.modal__btn:hover,
-.modal__btn:active {
-    transform: scale(1.05);
-    background: #cc0000;
-    box-shadow: 0 8px 20px rgba(204, 0, 0, 0.4);
+@media (hover: hover) {
+    .modal__btn:hover {
+        transform: scale(1.05);
+        background: #cc0000;
+        box-shadow: 0 8px 20px rgba(204, 0, 0, 0.4);
+    }
 }
 
 .modal__btn:active {
     transform: scale(0.95);
     background: #990000;
 }
-
-/* ===== МОДАЛЬНОЕ ОКНО БЛАГОДАРНОСТИ ===== */
 
 .modal__content--thankyou {
     text-align: center;
@@ -1155,21 +1163,19 @@ body {
     transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
-.modal__thankyou-btn:hover,
-.modal__thankyou-btn:active {
-    transform: scale(1.05);
-    background: #cc0000;
-    box-shadow: 0 8px 20px rgba(204, 0, 0, 0.4);
-}
-
 .modal__thankyou-btn:active {
     transform: scale(0.95);
     background: #990000;
 }
 
-/* ===== АДАПТИВНАЯ ВЁРСТКА ===== */
+@media (hover: hover) {
+    .modal__thankyou-btn:hover {
+        transform: scale(1.05);
+        background: #cc0000;
+        box-shadow: 0 8px 20px rgba(204, 0, 0, 0.4);
+    }
+}
 
-/* Планшеты (до 1024px) */
 @media screen and (max-width: 1024px) {
     .header__top {
         min-height: 80px;
@@ -1309,7 +1315,6 @@ body {
     }
 }
 
-/* Телефоны (до 768px) */
 @media screen and (max-width: 768px) {
     .header__burger-btn {
         display: flex;
@@ -1319,11 +1324,6 @@ body {
 
     .header__nav {
         display: none;
-    }
-
-    .header__mobile-nav,
-    .header__mobile-overlay {
-        display: block;
     }
 
     .header__top {
@@ -1582,7 +1582,6 @@ body {
     }
 }
 
-/* Маленькие телефоны (до 480px) */
 @media screen and (max-width: 480px) {
     .header__logo-text {
         font-size: 14px;

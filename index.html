@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:;base64,=">
     <title>Бургерная</title>
 </head>
@@ -17,17 +17,14 @@
                 </a>
             </div>
 
-            <!-- Кнопка бургер-меню -->
             <button class="header__burger-btn" aria-label="Открыть меню">
                 <span class="header__burger-line"></span>
                 <span class="header__burger-line"></span>
                 <span class="header__burger-line"></span>
             </button>
 
-            <!-- Затемнение фона -->
             <div class="header__mobile-overlay"></div>
 
-            <!-- Мобильное меню -->
             <nav class="header__mobile-nav">
                 <ul class="header__mobile-list">
                     <li class="header__mobile-item"><a href="#menu" class="header__mobile-link" data-section="menu">Меню</a></li>
@@ -37,7 +34,6 @@
                 </ul>
             </nav>
 
-            <!-- Десктопное меню -->
             <nav class="header__nav">
                 <ul class="header__list">
                     <li class="header__item"><a href="#menu" class="header__link" data-section="menu">Меню</a></li>
@@ -61,7 +57,6 @@
     </header>
 
     <main class="main">
-        <!-- Секция О нас -->
         <section class="about-section" id="about">
             <div class="about-section__container">
                 <h2 class="about-section__title">О нас</h2>
@@ -103,22 +98,18 @@
 
                     <div class="about-section__features">
                         <div class="about-section__feature">
-                            <div class="about-section__feature-icon">🍔</div>
                             <h3 class="about-section__feature-title">Свежие ингредиенты</h3>
                             <p class="about-section__feature-text">Закупаем продукты каждый день у проверенных поставщиков</p>
                         </div>
                         <div class="about-section__feature">
-                            <div class="about-section__feature-icon"></div>
                             <h3 class="about-section__feature-title">Быстрая доставка</h3>
                             <p class="about-section__feature-text">Доставляем заказ в течение 30 минут или вернём деньги</p>
                         </div>
                         <div class="about-section__feature">
-                            <div class="about-section__feature-icon">👨‍</div>
                             <h3 class="about-section__feature-title">Опытные повара</h3>
                             <p class="about-section__feature-text">Наши шеф-повара имеют опыт работы более 10 лет</p>
                         </div>
                         <div class="about-section__feature">
-                            <div class="about-section__feature-icon">💰</div>
                             <h3 class="about-section__feature-title">Доступные цены</h3>
                             <p class="about-section__feature-text">Качественная еда по ценам, которые не ударят по карману</p>
                         </div>
@@ -127,7 +118,6 @@
             </div>
         </section>
 
-        <!-- Секция Меню -->
         <section class="menu-section" id="menu">
             <h2 class="menu-section__title">Меню</h2>
 
@@ -159,7 +149,6 @@
             </div>
         </section>
 
-        <!-- Секция Акции -->
         <section class="promo-section" id="promo">
             <h2 class="promo-section__title">Акции</h2>
             <p class="promo-section__subtitle">Выгодные предложения только для вас</p>
@@ -202,7 +191,6 @@
                 </div>
 
                 <div class="promo-section__card">
-                    <div class="promo-section__card-badge"></div>
                     <div class="promo-section__card-img-wrapper">
                         <img src="./images/homemade.jpg" alt="Десерт в подарок" class="promo-section__card-img" width="400" height="220">
                     </div>
@@ -215,7 +203,6 @@
             </div>
         </section>
 
-        <!-- Секция Оформить заказ -->
         <section class="order-section" id="order">
             <div class="order-section__container">
                 <h2 class="order-section__title">Оформить заказ</h2>
@@ -276,7 +263,6 @@
         </div>
     </footer>
 
-    <!-- Модальное окно для карточек -->
     <div class="modal" id="cardModal">
         <div class="modal__overlay"></div>
         <div class="modal__content">
@@ -295,7 +281,6 @@
         </div>
     </div>
 
-    <!-- Модальное окно благодарности -->
     <div class="modal" id="thankYouModal">
         <div class="modal__overlay"></div>
         <div class="modal__content modal__content--thankyou">
@@ -307,6 +292,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="cardData.js"></script>
+    <script type="module" src="script.js"></script> 
 </body>
 </html>
